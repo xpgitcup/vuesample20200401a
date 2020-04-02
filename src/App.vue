@@ -1,28 +1,37 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id="app">
+        <Layout>
+            <Header>
+              <Menu mode="horizontal" class="flex j-bt" theme="light">
+                <div class="layout-logo">
+                  液体管道模拟
+                </div>
+              </Menu>
+            </Header>
+            <Layout>
+                <Sider>
+                    左侧
+                </Sider>
+                <Content>
+                    主题
+                </Content>
+            </Layout>
+            <Footer>
+
+            </Footer>
+        </Layout>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+    // import HelloWorld from './components/HelloWorld.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    export default {
+        name: 'App',
+        components: {}
+    }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style scoped>
+
 </style>
