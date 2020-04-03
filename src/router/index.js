@@ -15,7 +15,6 @@ export default new Router({
                 {path: 'stations', name: 'stations', component: () => import('../components/basic/stations')}
             ]
         },
-        {path: '/Login', name: 'Login', component: Login},
-        {path: 'stations', name: 'stations', components: () => import('../components/basic/stations')}
+        {path: '/Login', name: 'Login', component: Login}
     ]
 })
