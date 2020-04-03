@@ -25,7 +25,29 @@
 
 <script>
     export default {
-        name: "applicationTitle"
+        name: "applicationTitle",
+        methods: {
+            logout() {
+                console.log('退出');
+                this.postRequest("/logout").then(resp => {  // logout
+                    this.loading = false;
+
+                    console.log("调用结果");
+                    console.log(resp);
+
+                    if (resp) {
+                        this.$store.commit('LOGOUT_CURRENTHR', resp); // 这里的调用取决于doLogin的输出
+                        // window.sessionStorage.setItem("user", JSON.stringify(resp));
+                        // console.log('修改路由...');
+                        // let path = this.$route.query.redirect;
+                        // this.$router.replace((path == '/' || path == undefined) ? '/home' : path);
+                        console.log(this.$router);
+                        // router.replace('/');    // 跳转回首页
+                        // router.push('/')
+                    }
+                })
+            }
+        }
     }
 </script>
 

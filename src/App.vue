@@ -1,58 +1,10 @@
 <template>
     <div id="app">
-        <el-container>
-            <!-- 这里是页眉-->
-            <el-header>
-                <applicationTitle></applicationTitle>
-            </el-header>
-
-            <el-container>
-                <!-- 这里是菜单-->
-                <el-aside width="10%">
-                    <div v-if="$store.state.currentUser">
-                        {{$store.state.currentUser.username}}
-                        <status></status>
-                        <menus></menus>
-                        <el-button @click="logout">退出</el-button>
-                    </div>
-                </el-aside>
-
-                <!--这里是主显示区-->
-                <el-main>
-                    <div v-if="$store.state.currentUser">
-                        {{$store.state.currentUser.username}}
-                        <status></status>
-                        <el-button @click="logout">退出</el-button>
-                    </div>
-                    <div v-else>
-                        <info></info>
-                    </div>
-                </el-main>
-            </el-container>
-
-            <!-- 这里是页脚-->
-            <el-footer>
-                页脚
-            </el-footer>
-        </el-container>
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
-    import applicationTitle from "./components/home/applicationTitle.vue";
-    import info from './components/home/info.vue'
-    import status from './components/home/status.vue'
-    import menus from './components/home/menus.vue'
-
-    export default {
-        name: 'App',
-        components: {
-            applicationTitle,
-            info,
-            status,
-            menus
-        }
-    }
 </script>
 
 <style>
