@@ -11,12 +11,16 @@
                 <div v-if="$store.state.currentUser">
                     <menus></menus>
                 </div>
+                <div v-else>
+                </div>
+
             </el-aside>
+
 
             <!--这里是主显示区-->
             <el-main>
                 <div v-if="$store.state.currentUser">
-                    <router-view class="main"></router-view>
+                    <router-view></router-view>
                 </div>
                 <div v-else>
                     <info></info>

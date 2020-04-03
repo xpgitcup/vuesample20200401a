@@ -10,9 +10,12 @@ export default new Router({
         {
             path: '/', name: 'Home', component: () => import('../components/default.vue'),
             children: [
-                {path: '/info', name: 'info', components: () => import('../components/home/info')},
-                {path: '/topography', name: 'topography', components: () => import('../components/basic/topography')}
+                {path: '', name: 'info', component: () => import('../components/home/info')},
+                {path: 'topography', name: 'topography', component: () => import('../components/basic/topography')},
+                {path: 'stations', name: 'stations', component: () => import('../components/basic/stations')}
             ]
         },
-        {path: '/Login', name: 'Login', component: Login}]
+        {path: '/Login', name: 'Login', component: Login},
+        {path: 'stations', name: 'stations', components: () => import('../components/basic/stations')}
+    ]
 })
