@@ -10,7 +10,7 @@ export default new Router({
         {
             path: '/', name: 'Home', component: () => import('../components/default.vue'),
             children: [
-                {path: '', name: 'info', component: () => import('../components/home/info')},
+                {path: '', name: 'status', component: () => import('../components/home/status')},
                 {path: 'topography', name: 'topography', component: () => import('../components/basic/topography')},
                 {path: 'stations', name: 'stations', component: () => import('../components/basic/stations')}
             ]
