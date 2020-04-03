@@ -1,5 +1,7 @@
 <template>
-    <div>已经登陆了，显示当前用户的状态</div>
+    <el-card>
+        应该显示点什么呢？
+    </el-card>
 </template>
 
 <script>
