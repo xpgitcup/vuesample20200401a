@@ -15,7 +15,12 @@
 
             <!--这里是主显示区-->
             <el-main>
-                <router-view></router-view>
+                <div v-if="$store.state.currentUser">
+                    <router-view class="main"></router-view>
+                </div>
+                <div v-else>
+                    <info></info>
+                </div>
             </el-main>
         </el-container>
 
@@ -29,10 +34,12 @@
 <script>
     import applicationTitle from "./home/applicationTitle.vue";
     import menus from './home/menus.vue'
+    import Info from "./home/info";
 
     export default {
         name: "default",
         components: {
+            Info,
             applicationTitle,
             menus
         }
